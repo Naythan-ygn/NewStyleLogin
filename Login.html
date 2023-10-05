@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Login</title>
+
+    <style>        
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', 'Times New Roman', Times, serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100wh;
+            background-image: url("https://images.alphacoders.com/291/291093.jpg");
+        }
+
+        .wrapper {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper .form-box {
+            width: 100%;
+            height: 350px;            
+        }
+
+        .wrapper .icon-close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #162938;
+        }
+        .form-box h2 {
+            font-size: 2em;
+            color: #162938;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 90%;
+            height: 50px;
+            border-bottom: 2px solid #162938;
+            margin: 30px 20px;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            font-weight: 500;
+            color: #162938;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-box input:focus~label, 
+        .input-box input:valid~label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #162938;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: #162938;
+            line-height: 57px;
+        }
+
+        .remember-forget {
+            font-size: .9em;
+            color: #162938;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .remember-forget label input {
+            accent-color: #162938;
+            margin: 3px;
+        }
+
+        .remember-forget a {
+            color: #162938;
+            text-decoration: none;
+        }
+
+        .remember-forget a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 90%;            
+            height: 50px;
+            margin-left: 20px;
+            background: #162938;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            border:1px solid #162938;
+            background-color: transparent;
+            color: #162938;
+        }
+
+        .login-signup {
+            font-size: .9em;
+            color: #162938;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+
+        .login-signup p a {
+            text-decoration: none;
+            color: #162938;
+            font-weight: 600;
+        }
+
+        .login-signup p a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <span class="icon-close"><i class="fi fi-rr-circle-xmark"></i></span>
+        
+        <div class="form-box login">
+            <h2>Login</h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fi fi-rr-envelope"></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class="fi fi-rr-lock"></i></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forget">
+                    <label for="CB">
+                        <input type="checkbox" name="Check" id="CB">
+                         Remember Me 
+                    </label>
+                    <a href="#">Forgot Password</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="login-signup">
+                    <p>
+                        Don't have an account? 
+                        <a href="#" class="signup-link">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
